@@ -24,7 +24,7 @@
 				<nav class="nav">
 					<ul>
 						<li class="menuBut">
-							<a class="active" href="../Vapi.html"
+							<a class="active-nav" href="../Vapi.html"
 								><i class="fas fa-home"></i> Real Estate</a
 							>
 						</li>
@@ -46,66 +46,73 @@
 					</ul>
 				</nav>
 			</aside>
+
+			<!-- Main Container -->
 			<main class="main">
-			
-                <subNav class="subNav">
-                    <ul>
-						<!-- <li class="menuBut">
-							<a class="#" href="#"
-								><i class="fas fa-home"></i>DCSR</a
-							>
-						</li>
-						<li class="menuBut">
-							<a href="#"><i class="fas fa-money-bill"></i>Refinance</a>
-						</li>
-						<li class="menuBut">
-							<a href="#"><i class="fas fa-sun"></i>Processor</a>
-						</li> -->
-						
-                        <button type="button" class="collapsible">DCSR</button>
-                        <div class="content">
-                            <p>John Doe 1</p>
-                            
-                            <p>John Doe 2</p>
-                          </div>
+				<div class="grid-container">
+					<!-- Sub Navbar -->
+					<aside class="subNav">
+						<ul>
+							<button type="button" class="collapsible">DCSR</button>
+							<div class="content">
+								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
+								<a class="sub-but" href="#"> <p>John Doe 2</p></a>
+							</div>
 
-                          <button type="button" class="collapsible">Refinance</button>
-                        <div class="content">
-                            <p>John Doe 1</p>
-                          </div>
+							<button type="button" class="collapsible">Refinance</button>
+							<div class="content">
+								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
+							</div>
 
-                          <button type="button" class="collapsible">Processor</button>
-                        <div class="content">
-                            <p>John Doe 1</p>
-                          </div>
-					</ul>
+							<button type="button" class="collapsible">Processor</button>
+							<div class="content">
+								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
+							</div>
+						</ul>
+					</aside>
 
-                </subNav>
-                <div class="sub-Container">
-                    <div class="alert">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <p>Agent not selected</p>
-                    </div>
-                </div>
+					<!-- Sub Container -->
+					<div class="sub-Container">
+						<div class="alert">
+							<i class="fas fa-exclamation-circle"></i>
+							<p>Agent not selected</p>
+						</div>
+					</div>
+				</div>
 			</main>
 		</div>
 
-        
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-    </script>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+
+            // Toggle sub-but-active class on sub-but elements
+		document.addEventListener('DOMContentLoaded', function () {
+			var subButtons = document.querySelectorAll('.sub-but');
+			subButtons.forEach(function (button) {
+				button.addEventListener('click', function (event) {
+					event.preventDefault(); // Prevent the default action of the anchor tag
+					// Remove 'sub-but-active' class from all sub-buttons
+					subButtons.forEach(function (btn) {
+						btn.classList.remove('sub-but-active');
+					});
+					// Add 'sub-but-active' class to the clicked sub-button
+					this.classList.add('sub-but-active');
+				});
+			});
+		});
+		</script>
 	</body>
 </html>

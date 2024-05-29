@@ -61,11 +61,11 @@ body {
 }
 
 .nav ul li a:hover {
-	color: #ff6600;
+	color: #ff7e00;
 }
 
-.nav ul li a.active {
-	background-color: #ff6600;
+.nav ul li a.active-nav {
+	background-color: #ff7e00;
 	color: #fff;
 }
 
@@ -136,7 +136,7 @@ body {
 .subNav {
 	text-align: left;
 	margin: 30px 10px 0px 10px;
-	background-color: #ff6600;
+	background-color: #ff7e00;
 }
 
 .subNav ul {
@@ -166,13 +166,14 @@ body {
 }
 
 .subNav ul li a:hover {
-	color: #ff6600;
+	color: #ff7e00;
 }
 
 .subNav ul li a.active {
 	/* background-color: #ff6600; */
-	color: #ff6600;
+	color: #ff7e00;
 }
+
 
 /* ----------------------C O L L A P S I B L E----------------------------- */
 .collapsible {
@@ -185,37 +186,83 @@ body {
 	text-align: left;
 	outline: none;
 	font-size: 15px;
-	border-radius: 10px;
+	border-radius: 8px;
+	transition: background-color 0.3s;
+	margin-bottom: 5px;
+}
+.collapsible:hover {
+	background-color: #ff7e00;
 }
 
-.active,
-.collapsible:hover {
-	/* background-color: #555; */
+.collapsible:after {
+	content: "\002B";
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2212";
 }
 
 .content {
-	padding: 0px 0px 0px 40px;
-    font-size: small;
+	padding: 0 18px;
 	display: none;
 	overflow: hidden;
-	/* background-color: #3a1010; */
-	border-radius: 10px;
+	background-color: #120f0d;
+	border-radius: 8px;
+	margin-bottom: 10px;
 }
+
 .content p {
-    margin-bottom: 5px;
-    background-color: #252322 ;
-    padding: 8px;
-    width: 8%;
-    border-radius: 10px;
+	/* color: white; */
+	/* background-color: #ff7e00; */
+    border-radius: 8px;
+	margin: 5px 0;
+	padding: 10px;
+}
+
+.active,
+.sub-but-active,
+.collapsible:hover {
+    /* color: #ff6600; */
+	background-color: #120f0d;
+}
+
+.sub-but {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.sub-but-active {
+    font-weight: bold;
+    color: #ff7e00;
+    background-color: #ff7e00;
+
 }
 
 /* ----------------------S U B - C O N T A I N E R----------------------------- */
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 10px;
+	height: 100%;
+}
+.subNav {
+	grid-column: 1 / 2;
+	background-color: #120f0d;
+	padding: 20px;
+	border-radius: 8px;
+}
+
 .sub-Container {
-	flex: 2;
+	grid-column: 2 / 6;
+	/* background-color: #3a3734; */
+	background-color: rgba(75, 75, 75, 0.3);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #999696;
 	border-radius: 30px;
 }
 
@@ -230,5 +277,5 @@ body {
 
 .alert p {
 	margin: 0;
-	font-size: 18px;
+	font-size: 12px;
 }
