@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="../vapi.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha384-dyXyO1rl12k2HQyDJFt9m1lRB6j6ZR3zBJ3HFu6W1R3QwT7pUyy4FhP6fRxzFX5N"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<aside class="sidebar">
+				<div class="logo">
+					<a href="../Vapi.html">
+						<img src="../Images/Logo.png" alt="Logo" href="../Vapi.html"
+					/></a>
+				</div>
+				<!-- Main Navbar -->
+				<nav class="nav">
+					<ul>
+						<li class="menuBut">
+							<a class="active" href="../Vapi.html"
+								><i class="fas fa-home"></i> Real Estate</a
+							>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-money-bill"></i> Mortgage</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-sun"></i> Solar</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-shield-alt"></i> Insurance</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-industry"></i> Steel</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-car"></i> Automotive</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main">
+			
+                <subNav class="subNav">
+                    <ul>
+						<!-- <li class="menuBut">
+							<a class="#" href="#"
+								><i class="fas fa-home"></i>DCSR</a
+							>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-money-bill"></i>Refinance</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-sun"></i>Processor</a>
+						</li> -->
+						
+                        <button type="button" class="collapsible">DCSR</button>
+                        <div class="content">
+                            <p>John Doe 1</p>
+                            
+                            <p>John Doe 2</p>
+                          </div>
+
+                          <button type="button" class="collapsible">Refinance</button>
+                        <div class="content">
+                            <p>John Doe 1</p>
+                          </div>
+
+                          <button type="button" class="collapsible">Processor</button>
+                        <div class="content">
+                            <p>John Doe 1</p>
+                          </div>
+					</ul>
+
+                </subNav>
+                <div class="sub-Container">
+                    <div class="alert">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Agent not selected</p>
+                    </div>
+                </div>
+			</main>
+		</div>
+
+        
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+	</body>
+</html>
