@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="../vapi.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha384-dyXyO1rl12k2HQyDJFt9m1lRB6j6ZR3zBJ3HFu6W1R3QwT7pUyy4FhP6fRxzFX5N"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<aside class="sidebar">
+				<div class="logo">
+					<a href="../Vapi.html">
+						<img src="../Images/Logo.png" alt="Logo" href="../Vapi.html"
+					/></a>
+				</div>
+				<!-- Main Navbar -->
+				<nav class="nav">
+					<ul>
+						<li class="menuBut">
+							<a class="active-nav" href="../Vapi.html"
+								><i class="fas fa-home"></i> Real Estate</a
+							>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-money-bill"></i> Mortgage</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-sun"></i> Solar</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-shield-alt"></i> Insurance</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-industry"></i> Steel</a>
+						</li>
+						<li class="menuBut">
+							<a href="#"><i class="fas fa-car"></i> Automotive</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+
+			<!-- Main Container -->
+			<main class="main">
+				<div class="grid-container">
+					<!-- Sub Navbar -->
+					<aside class="subNav">
+						<ul>
+							<button type="button" class="collapsible">DCSR</button>
+							<div class="content">
+								<a class="sub-but" href="../Container/detialContainer.html" data-target="../Container/detialContainer.html">
+									<p>John Doe 1</p>
+								</a>
+								<a class="sub-but" href="#"> <p>John Doe 2</p></a>
+							</div>
+
+							<button type="button" class="collapsible">Refinance</button>
+							<div class="content">
+								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
+							</div>
+
+							<button type="button" class="collapsible">Processor</button>
+							<div class="content">
+								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
+							</div>
+						</ul>
+					</aside>
+
+					<!-- Sub Container -->
+					<div class="sub-Container">
+						<div class="alert">
+							
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script>
+			// Function to handle the collapsible sections
+			var coll = document.getElementsByClassName("collapsible");
+			for (var i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+		
+			// Function to handle sub-button clicks and navigation
+			document.addEventListener('DOMContentLoaded', function () {
+				var subButtons = document.querySelectorAll('.sub-but');
+				subButtons.forEach(function (button) {
+					button.addEventListener('click', function (event) {
+						event.preventDefault(); // Prevent the default action of the anchor tag
+						// Remove 'sub-but-active' class from all sub-buttons
+						subButtons.forEach(function (btn) {
+							btn.classList.remove('sub-but-active');
+						});
+						// Add 'sub-but-active' class to the clicked sub-button
+						this.classList.add('sub-but-active');
+		
+						// Navigate to the target URL if the data-target attribute is present
+						var targetUrl = this.getAttribute('data-target');
+						if (targetUrl) {
+							window.location.href = targetUrl;
+						}
+					});
+				});
+			});
+		</script>
+		
+	</body>
+</html>

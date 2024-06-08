@@ -17,15 +17,15 @@
 			<aside class="sidebar">
 				<div class="logo">
 					<a href="../Vapi.html">
-						<img src="../Images/Logo.png" alt="Logo" href="../Vapi.html"
-					/></a>
+						<img src="../Images/Logo.png" alt="Logo" href="../Vapi.html" />
+					</a>
 				</div>
 				<!-- Main Navbar -->
 				<nav class="nav">
 					<ul>
 						<li class="menuBut">
-							<a class="active-nav" href="../Vapi.html"
-								><i class="fas fa-home"></i> Real Estate</a
+							<a class="active-nav" href="../Vapi.html">
+								<i class="fas fa-home"></i> Real Estate</a
 							>
 						</li>
 						<li class="menuBut">
@@ -55,18 +55,23 @@
 						<ul>
 							<button type="button" class="collapsible">DCSR</button>
 							<div class="content">
-								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
-								<a class="sub-but" href="#"> <p>John Doe 2</p></a>
+								<a
+									class="sub-but"
+									href="../Container/detialContainer.html"
+									id="johnDoe1"
+									><p>John Doe 1</p></a
+								>
+								<a class="sub-but" href="#" id="johnDoe2"><p>John Doe 2</p></a>
 							</div>
 
 							<button type="button" class="collapsible">Refinance</button>
 							<div class="content">
-								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
+								<a class="sub-but" href="#"><p>John Doe 1</p></a>
 							</div>
 
 							<button type="button" class="collapsible">Processor</button>
 							<div class="content">
-								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
+								<a class="sub-but" href="#"><p>John Doe 1</p></a>
 							</div>
 						</ul>
 					</aside>
@@ -74,7 +79,7 @@
 					<!-- Sub Container -->
 					<div class="sub-Container">
 						<div class="alert">
-							<i class="fas fa-exclamation-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
 							<p>Agent not selected</p>
 						</div>
 					</div>
@@ -83,10 +88,9 @@
 		</div>
 
 		<script>
+			// Function to handle the collapsible sections
 			var coll = document.getElementsByClassName("collapsible");
-			var i;
-
-			for (i = 0; i < coll.length; i++) {
+			for (var i = 0; i < coll.length; i++) {
 				coll[i].addEventListener("click", function () {
 					this.classList.toggle("active");
 					var content = this.nextElementSibling;
@@ -98,21 +102,83 @@
 				});
 			}
 
-            // Toggle sub-but-active class on sub-but elements
-		document.addEventListener('DOMContentLoaded', function () {
-			var subButtons = document.querySelectorAll('.sub-but');
-			subButtons.forEach(function (button) {
-				button.addEventListener('click', function (event) {
-					event.preventDefault(); // Prevent the default action of the anchor tag
-					// Remove 'sub-but-active' class from all sub-buttons
-					subButtons.forEach(function (btn) {
-						btn.classList.remove('sub-but-active');
+			// Function to handle sub-button clicks and render cards
+			document.addEventListener("DOMContentLoaded", function () {
+				var subButtons = document.querySelectorAll(".sub-but");
+				subButtons.forEach(function (button) {
+					button.addEventListener("click", function (event) {
+						event.preventDefault(); // Prevent the default action of the anchor tag
+						// Remove 'sub-but-active' class from all sub-buttons
+						subButtons.forEach(function (btn) {
+							btn.classList.remove("sub-but-active");
+						});
+						// Add 'sub-but-active' class to the clicked sub-button
+						this.classList.add("sub-but-active");
+
+						// Dynamically add cards to the sub-container if John Doe 1 is clicked
+						if (this.id === "johnDoe1") {
+							var alertDiv = document.querySelector(".sub-Container .alert");
+							alertDiv.innerHTML = ""; // Clear any existing content
+
+							// Generate card HTML and insert into the alert div
+							var cardsHtml = `
+                            <div class="title">
+                                <h1>John Doe 1</h1>
+                            </div>
+                            <div class="card">
+                                <h3>Transcript 1</h3>
+                                <p>Some description for card 1.</p>
+                            </div>
+                            
+                            <div class="card-set">
+                                <div class="inner-card" style="display: inline-block;">
+                                    <div style="display: flex; flex-direction: column; height: 50%;">
+                                        <h4>No of calls made</h4>
+                                        <h1>353</h1>
+                                    </div>
+                                </div>
+                                <div class="inner-card" style="display: inline-block;">
+                                    <div style="display: flex; flex-direction: column; height: 50%;">
+                                    <h4>No of calls answered</h4>
+                                    <h1>678</h1>
+                                    </div>
+                                </div>
+                                <div class="inner-card" style="display: inline-block;">
+                                    <div style="display: flex; flex-direction: column; height: 50%;">
+                                    <h4>Made it pass the mission statement</h4>
+                                    <h1>23</h1>
+                                </div>
+                                </div>
+                                <div class="inner-card" style="display: inline-block;">
+                                    <div style="display: flex; flex-direction: column; height: 50%;">
+                                    <h4>Did not made it pass the mission statement</h4>
+                                    <h1>345</h1>
+                                </div>
+                                </div>
+                            </div>
+                            
+                        `;
+							alertDiv.innerHTML = cardsHtml;
+						}
+
+						if (this.id === "johnDoe2") {
+							var alertDiv = document.querySelector(".sub-Container .alert");
+							alertDiv.innerHTML = ""; // Clear any existing content
+
+							// Generate card HTML and insert into the alert div
+							var cardsHtml = `
+                            <div class="card">
+                                <h3>Summary</h3>
+                                <p>Some description for card 1.</p>
+                            </div>
+                            
+                            
+                        `;
+							alertDiv.innerHTML = cardsHtml;
+						}
 					});
-					// Add 'sub-but-active' class to the clicked sub-button
-					this.classList.add('sub-but-active');
 				});
 			});
-		});
 		</script>
 	</body>
 </html>
