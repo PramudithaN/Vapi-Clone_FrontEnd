@@ -133,6 +133,8 @@ body {
 	text-align: left;
 	margin: 30px 10px 0px 10px;
 	background-color: #ff7e00;
+	max-height: 100%;
+	overflow-y: auto;
 }
 
 .subNav ul {
@@ -146,7 +148,7 @@ body {
 
 .subNav ul li {
 	margin: 10px 0;
-	width: 15%;
+	width: 100%;
 	border-radius: 10px;
 }
 
@@ -182,6 +184,7 @@ body {
 	transition: background-color 0.3s;
 	margin-bottom: 5px;
 }
+
 .collapsible:hover {
 	background-color: #ff7e00;
 }
@@ -237,6 +240,7 @@ body {
 	gap: 10px;
 	height: 100%;
 }
+
 .subNav {
 	grid-column: 1 / 2;
 	background-color: #120f0d;
@@ -261,6 +265,38 @@ body {
 .sub-Container::-webkit-scrollbar-thumb {
 	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 4px;
+}
+
+/* ----------------------Styled Scrollbar----------------------------- */
+
+.subNav::-webkit-scrollbar {
+	width: 12px;
+}
+
+.subNav::-webkit-scrollbar-track {
+	background: #292929;
+	border-radius: 10px;
+}
+
+.subNav::-webkit-scrollbar-thumb {
+	background-color: #9b9b9b;
+	border-radius: 10px;
+	border: 3px solid #292929;
+}
+
+.sub-Container::-webkit-scrollbar {
+	width: 12px;
+}
+
+.sub-Container::-webkit-scrollbar-track {
+	background: #292929;
+	border-radius: 10px;
+}
+
+.sub-Container::-webkit-scrollbar-thumb {
+	background-color: #9b9b9b;
+	border-radius: 10px;
+	border: 3px solid #292929;
 }
 
 .alert {
@@ -288,14 +324,12 @@ body {
 
 .card {
 	background: #1c1c1c;
-	width: 1450px;
-	/* height: 340px; */
+	width: 100%;
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	margin-top: 1px;
 	margin-bottom: 16px;
 	padding: 16px;
-	margin-left: 65px;
 	text-align: center;
 }
 
@@ -372,24 +406,22 @@ body {
 	font-size: 30px;
 }
 
-.side-stausBar{
+.side-stausBar {
 	text-align: center;
 	width: 250px;
 	margin-top: 320px;
 	font-size: 30px;
-
-	/* background-color: #999; */
 }
 
 .approved {
-	background-color: #4CAF50;
-	color: white; 
+	background-color: #4caf50;
+	color: white;
 	padding: 10px 20px;
-	margin-left: 40px; 
-	text-align: center; 
+	margin-left: 40px;
+	text-align: center;
 	font-size: 16px;
-	font-weight: bold; 
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-	transition: background-color 0.3s ease; 
+	font-weight: bold;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
 	border-radius: 20px;
 }
