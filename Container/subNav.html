@@ -55,12 +55,7 @@
 						<ul>
 							<button type="button" class="collapsible">DCSR</button>
 							<div class="content">
-								<a
-									class="sub-but"
-									href="../Container/detialContainer.html"
-									id="johnDoe1"
-									><p>John Doe 1</p></a
-								>
+								<a class="sub-but" href="#" id="johnDoe1"><p>John Doe 1</p></a>
 								<a class="sub-but" href="#" id="johnDoe2"><p>John Doe 2</p></a>
 							</div>
 
@@ -79,7 +74,7 @@
 					<!-- Sub Container -->
 					<div class="sub-Container">
 						<div class="alert">
-                            <i class="fas fa-exclamation-circle"></i>
+							<i class="fas fa-exclamation-circle"></i>
 							<p>Agent not selected</p>
 						</div>
 					</div>
@@ -101,6 +96,11 @@
 					}
 				});
 			}
+
+			// <div class="card">
+			//     <h3>Transcript 1</h3>
+			//     <p>Some description for card 1.</p>
+			// </div>
 
 			// Function to handle sub-button clicks and render cards
 			document.addEventListener("DOMContentLoaded", function () {
@@ -125,10 +125,7 @@
                             <div class="title">
                                 <h1>John Doe 1</h1>
                             </div>
-                            <div class="card">
-                                <h3>Transcript 1</h3>
-                                <p>Some description for card 1.</p>
-                            </div>
+                       
                             
                             <div class="card-set">
                                 <div class="inner-card" style="display: inline-block;">
@@ -156,6 +153,12 @@
                                 </div>
                                 </div>
                             </div>
+
+                           <div class="audio-set">
+                           <a href="../Container/detialContainer.html" target="_blank"> <p>Recording 01</p></a>
+                            <p>Recording 02</p>
+                            </div>
+
                             
                         `;
 							alertDiv.innerHTML = cardsHtml;
@@ -169,6 +172,10 @@
 							var cardsHtml = `
                             <div class="card">
                                 <h3>Summary</h3>
+                                <audio controls>
+  <source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
                                 <p>Some description for card 1.</p>
                             </div>
                             

@@ -13,113 +13,67 @@
 		/>
 	</head>
 	<body>
+		<div class="Recording-Title">Recording 01</div>
 		<div class="container">
-			<aside class="sidebar">
-				<div class="logo">
-					<a href="../Vapi.html">
-						<img src="../Images/Logo.png" alt="Logo" href="../Vapi.html"
-					/></a>
-				</div>
-				<!-- Main Navbar -->
-				<nav class="nav">
-					<ul>
-						<li class="menuBut">
-							<a class="active-nav" href="../Vapi.html"
-								><i class="fas fa-home"></i> Real Estate</a
-							>
-						</li>
-						<li class="menuBut">
-							<a href="#"><i class="fas fa-money-bill"></i> Mortgage</a>
-						</li>
-						<li class="menuBut">
-							<a href="#"><i class="fas fa-sun"></i> Solar</a>
-						</li>
-						<li class="menuBut">
-							<a href="#"><i class="fas fa-shield-alt"></i> Insurance</a>
-						</li>
-						<li class="menuBut">
-							<a href="#"><i class="fas fa-industry"></i> Steel</a>
-						</li>
-						<li class="menuBut">
-							<a href="#"><i class="fas fa-car"></i> Automotive</a>
-						</li>
-					</ul>
-				</nav>
-			</aside>
-
 			<!-- Main Container -->
-			<main class="main">
+			<main class="main" style="margin-left: 30px">
 				<div class="grid-container">
-					<!-- Sub Navbar -->
-					<aside class="subNav">
-						<ul>
-							<button type="button" class="collapsible">DCSR</button>
-							<div class="content">
-								<a class="sub-but" href="../Container/detialContainer.html" data-target="../Container/detialContainer.html">
-									<p>John Doe 1</p>
-								</a>
-								<a class="sub-but" href="#"> <p>John Doe 2</p></a>
-							</div>
+					<div class="card">
+						<h3>Transcript</h3>
+						<p>
+							Sure! Here’s a different summary presented as a single paragraph:
+							During the 35-minute recording on June 8, 2024, the conversation
+							commenced with brief introductions and an exchange of
+							pleasantries. The agent then provided an overview of the current
+							real estate market trends, discussing the rising property values
+							and high demand in urban areas. The caller expressed interest in
+							investment opportunities, prompting the agent to elaborate on
+							various mortgage options, including fixed-rate and adjustable-rate
+							mortgages, tailored to the caller's financial situation. The
+							discussion shifted to solar energy solutions, highlighting the
+							benefits of cost savings and environmental impact, with
+							recommendations for reputable solar companies. The importance of
+							comprehensive insurance coverage for properties was also
+							addressed, covering homeowner’s, flood, and liability insurance.
+							Additionally, the rising prices of construction materials,
+							particularly steel, were noted, and the agent suggested
+							alternative materials and suppliers. Towards the end of the call,
+							insights into the automotive industry, especially trends in
+							electric vehicles and advancements in technology, were provided as
+							the caller showed interest in diversifying investments. The call
+							concluded with a summary of key points, a promise to send detailed
+							information, and an agreement to schedule a follow-up call to
+							discuss investment plans further. The caller expressed
+							satisfaction with the information provided and interest in
+							pursuing several discussed opportunities.
+						</p>
 
-							<button type="button" class="collapsible">Refinance</button>
-							<div class="content">
-								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
-							</div>
-
-							<button type="button" class="collapsible">Processor</button>
-							<div class="content">
-								<a class="sub-but" href="#"> <p>John Doe 1</p></a>
-							</div>
-						</ul>
-					</aside>
-
-					<!-- Sub Container -->
-					<div class="sub-Container">
-						<div class="alert">
-							
+						<div class="audio-set">
+							<audio controls>
+								<source
+									src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
+									type="audio/ogg"
+								/>
+								Your browser does not support the audio element.
+							</audio>
 						</div>
+
+						<h3>Summary</h3>
+						<p>
+							The caller seemed satisfied with the information provided and
+							expressed interest in pursuing several investment opportunities
+							discussed during the call. A follow-up meeting was scheduled for
+							the following week to delve deeper into specific investment plans
+							and to review the materials sent by the agent.
+						</p>
+					</div>
+					<div class="side-stausBar">
+						<div class="approved">Approved</div>
 					</div>
 				</div>
 			</main>
 		</div>
 
-		<script>
-			// Function to handle the collapsible sections
-			var coll = document.getElementsByClassName("collapsible");
-			for (var i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function () {
-					this.classList.toggle("active");
-					var content = this.nextElementSibling;
-					if (content.style.display === "block") {
-						content.style.display = "none";
-					} else {
-						content.style.display = "block";
-					}
-				});
-			}
-		
-			// Function to handle sub-button clicks and navigation
-			document.addEventListener('DOMContentLoaded', function () {
-				var subButtons = document.querySelectorAll('.sub-but');
-				subButtons.forEach(function (button) {
-					button.addEventListener('click', function (event) {
-						event.preventDefault(); // Prevent the default action of the anchor tag
-						// Remove 'sub-but-active' class from all sub-buttons
-						subButtons.forEach(function (btn) {
-							btn.classList.remove('sub-but-active');
-						});
-						// Add 'sub-but-active' class to the clicked sub-button
-						this.classList.add('sub-but-active');
-		
-						// Navigate to the target URL if the data-target attribute is present
-						var targetUrl = this.getAttribute('data-target');
-						if (targetUrl) {
-							window.location.href = targetUrl;
-						}
-					});
-				});
-			});
-		</script>
-		
+		<script></script>
 	</body>
 </html>
