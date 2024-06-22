@@ -1,6 +1,6 @@
 # Vapi-Clone_FrontEnd
 
-You can find the Design here👇
+You can find the Design here👉
 https://www.figma.com/design/rhy9zW4ZsYVJUIXLV8ot3r/VAPI-Clone?node-id=0-1&t=dDuK0ecRnC1LKmwL-1
 
 Welcome to the Chatbot Management Platform! This project is a frontend application built using HTML and CSS, which allows users to manage multiple chatbots, view call recordings, transcriptions, summaries, and various statistics for each chatbot and its subcategories.
