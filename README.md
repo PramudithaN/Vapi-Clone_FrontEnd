@@ -16,7 +16,8 @@ The Chatbot Management Platform is designed to help users manage their chatbots 
 - **Transcription**: View the transcriptions of the call recordings.
 - **Summary**: Generate and view summaries of the call recordings.
 - **Statistics**: Visualize statistics related to call recordings and user interactions.
-![Third Page Agent Stats](https://github.com/PramudithaN/Vapi-Clone_FrontEnd/assets/79605208/d779c8fa-c421-4e9a-9a59-f1e6d472aadc)
-![VAPI_clone](https://github.com/PramudithaN/Vapi-Clone_FrontEnd/assets/79605208/c74ef843-57bc-48bf-8d8a-175db56bc74d)
+
 ![Landing Page](https://github.com/PramudithaN/Vapi-Clone_FrontEnd/assets/79605208/00185521-7fd2-4078-a3d0-fdb549a1bbd4)
 ![Second Page After Collapse](https://github.com/PramudithaN/Vapi-Clone_FrontEnd/assets/79605208/0f790818-17c6-4316-bd73-a8fa49074f39)
+![Third Page Agent Stats](https://github.com/PramudithaN/Vapi-Clone_FrontEnd/assets/79605208/d779c8fa-c421-4e9a-9a59-f1e6d472aadc)
+![VAPI_clone](https://github.com/PramudithaN/Vapi-Clone_FrontEnd/assets/79605208/c74ef843-57bc-48bf-8d8a-175db56bc74d)
