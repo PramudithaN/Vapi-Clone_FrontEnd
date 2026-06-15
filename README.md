@@ -5,8 +5,6 @@
 ![FontAwesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
-You can find the Design here👉 https://www.figma.com/design/rhy9zW4ZsYVJUIXLV8ot3r/VAPI-Clone?node-id=0-1&t=dDuK0ecRnC1LKmwL-1
-
 > A comprehensive frontend dashboard clone for the Vapi Chatbot Management Platform, built with vanilla HTML and CSS.
 
 ---
